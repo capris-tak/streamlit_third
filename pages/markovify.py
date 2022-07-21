@@ -80,7 +80,7 @@ import markovify
 splitted_text_str = text_split(text)
 text_model = markovify.NewlineText(splitted_text_str, state_size=2)
 
-for i in range(9):
+for i in range(5):
     st.write(text_model.make_sentence(tries=1000))
     st.write("---------------------------------")
 
@@ -102,6 +102,6 @@ st.write('Sentiment:', text_split(txt))
 if txt != None:
     splitted_txt_str = text_split(txt)
     txt_model = markovify.NewlineText(splitted_txt_str, state_size=2)
-    for i in range(9):
+    for i in range(5):
         st.write(txt_model.make_sentence(tries=1000))
         st.write("---------------------------------")

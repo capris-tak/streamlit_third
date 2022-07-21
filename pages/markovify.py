@@ -75,9 +75,23 @@ def text_split(text):
         splitted_text_str = "".join(splitted_text_list)
             
     return splitted_text_str
-st.write(text_split(text))
+
+splitted_text_str = text_split(text)
+text_model = markovify.NewlineText(splitted_text_str, state_size=2)
+
+for i in range(9):
+    st.write(text_model.make_sentence(tries=1000))
+    st.write("---------------------------------")
 
 
+
+
+
+
+
+st.write("---------------------------------")
+st.write("---------------------------------")
+st.write("---------------------------------")
 st.text_area('Text to analyze', '''
      It was the best of times, it was the worst of times, it was
      the age of wisdom, it was the age of foolishness, it was

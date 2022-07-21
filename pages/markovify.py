@@ -94,7 +94,7 @@ txt = st.text_area('Text to analyze', '''
      the epoch of belief, it was the epoch of incredulity, it
      was the season of Light, it was the season of Darkness, it
      was the spring of hope, it was the winter of despair, (...)
-     ''')
+     ''', height=10)
 st.write('Sentiment:', text_split(txt))
 
 if txt != None:

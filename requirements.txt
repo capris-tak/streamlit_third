@@ -5,4 +5,4 @@ numpy
 markovify
 janome
 pysummarization
-MeCab
+MeCab-python

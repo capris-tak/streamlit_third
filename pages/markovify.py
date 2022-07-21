@@ -96,15 +96,11 @@ st.write("---------------------------------")
 st.write("---------------------------------")
 st.write("---------------------------------")
 txt = st.text_area('Text to analyze', '''
-     It was the best of times, it was the worst of times, it was
-     the age of wisdom, it was the age of foolishness, it was
-     the epoch of belief, it was the epoch of incredulity, it
-     was the season of Light, it was the season of Darkness, it
-     was the spring of hope, it was the winter of despair, (...)
-     ''')
-if txt != None:
-    splitted_txt_str = text_split(txt)
-    txt_model = markovify.NewlineText(splitted_txt_str, state_size=2)
-    for i in range(9):
-        st.write(txt_model.make_sentence(tries=1000))
-        st.write("---------------------------------")
+     ''',on_change=analyze_txt(txt))
+def analyze_txt(txt):
+    if txt != None:
+        splitted_txt_str = text_split(txt)
+        txt_model = markovify.NewlineText(splitted_txt_str, state_size=2)
+        for i in range(9):
+            st.write(txt_model.make_sentence(tries=1000))
+            st.write("---------------------------------")

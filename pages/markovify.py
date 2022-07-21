@@ -102,8 +102,9 @@ txt = st.text_area('Text to analyze', '''
      was the season of Light, it was the season of Darkness, it
      was the spring of hope, it was the winter of despair, (...)
      ''')
-splitted_txt_str = text_split(txt)
-txt_model = markovify.NewlineText(splitted_txt_str, state_size=2)
-for i in range(9):
-    st.write(txt_model.make_sentence(tries=1000))
-    st.write("---------------------------------")
+if txt != None:
+    splitted_txt_str = text_split(txt)
+    txt_model = markovify.NewlineText(splitted_txt_str, state_size=2)
+    for i in range(9):
+        st.write(txt_model.make_sentence(tries=1000))
+        st.write("---------------------------------")

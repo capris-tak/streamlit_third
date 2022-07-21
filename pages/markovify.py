@@ -76,6 +76,7 @@ def text_split(text):
             
     return splitted_text_str
 
+import markovify
 splitted_text_str = text_split(text)
 text_model = markovify.NewlineText(splitted_text_str, state_size=2)
 

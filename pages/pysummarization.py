@@ -1,6 +1,6 @@
 import streamlit as st
 
-'''長文テキストを自動要約pysummarization'''
+'''長文テキストを自動要約pysummarization
 
 import pandas as pd
 from pysummarization.nlpbase.auto_abstractor import AutoAbstractor
@@ -24,6 +24,7 @@ similarity_filter.nlp_base = nlp_base
 # 類似性がこの値を超えると、文は切り捨てられます
 similarity_filter.similarity_limit = 0.3
 
+'''
 document='''
 ヘヴィメタル
 
@@ -135,7 +136,7 @@ NWOBHMそのものは1980年代半ばにその勢いを失ってしまうが、�
 一方でスリップノットが「Knotfest」（ノットフェスト）を主催して、親交のあるメタルバンドと世界規模のツアーを実現するなど、新しい世代による音楽活動も精力的に行われた。
 '''
 
-
+'''
 # 自動要約のオブジェクト
 auto_abstractor = AutoAbstractor()
 
@@ -152,3 +153,4 @@ result_dict = auto_abstractor.summarize(document, abstractable_doc, similarity_f
 # 出力
 for sentence in result_dict["summarize_result"]:
     st.write(sentence)
+'''

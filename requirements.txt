@@ -6,3 +6,11 @@ markovify
 janome
 pysummarization
 MeCab-python
+
+pyocr
+Pillow
+pyocr.builders
+pdf2image
+re
+subprocess
+pathlib

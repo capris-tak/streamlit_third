@@ -9,7 +9,6 @@ MeCab-python
 
 pyocr
 Pillow
-pyocr.builders
 pdf2image
 re
 subprocess

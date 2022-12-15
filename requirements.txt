@@ -1,8 +1,2 @@
-pandas
-plotly
+
 streamlit
-numpy
-markovify
-janome
-pysummarization
-MeCab-python

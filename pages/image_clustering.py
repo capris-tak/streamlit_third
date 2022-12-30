@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from sklearn import svm
 import pickle
-
+'''
 cs = sorted([x.split('/')[-1] for x in glob.glob('images/*')])
 
 labels = []
@@ -30,7 +30,7 @@ print(model.score(images, labels))
 # 学習データをファイルに保存
 pickle.dump(model, open("model.sav", "wb"))
 
-
+'''
 #学習モデルの読み込み
 model = pickle.load(open("model.sav", 'rb'))
 #フォルダ内の画像ファイルを取り出す

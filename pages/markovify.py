@@ -1,5 +1,6 @@
 import streamlit as st
 
+'''
 from janome.tokenizer import Tokenizer
 import pandas as pd
 #import collections

@@ -1,6 +1,5 @@
 import os
 import cv2
-from google.colab.patches import cv2_imshow
 import glob
 import pandas as pd
 import numpy as np
